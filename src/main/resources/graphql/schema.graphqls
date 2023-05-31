@@ -1,0 +1,27 @@
+
+
+
+type Query {
+    girlfriends : [Girlfriend],
+    getGirlfriendByName(name: String!): Girlfriend
+}
+
+
+type Girlfriend {
+    name: String
+    age: Int
+}
+
+type City {
+    cityName: String
+}
+
+
+"""
+purposely leaving an attribute out of State --> State.population()
+
+"""
+type State {
+    stateName: String
+    cities: [City]
+}
