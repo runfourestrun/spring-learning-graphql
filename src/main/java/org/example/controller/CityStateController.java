@@ -3,25 +3,35 @@ package org.example.controller;
 import org.example.dto.City;
 import org.example.dto.State;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
+/***
+ * for some reason this doesn't work.
+ */
+
+@Controller
 public class CityStateController {
 
     List<State> states;
 
     public CityStateController(){
 
-        this.states = List.of(
-                new State("Arizona",List.of(new City("Tempe")),20000),
-                new State("Colorado",List.of(new City("Denver"),new City("Aurora")),100000)
-        );
+        City tempe = new City("Tempe");
+        City denver = new City("Denver");
+        City aurora = new City("Aurora");
+
+        State arizona = new State("Arizona", List.of(tempe), 20000);
+        State colorado = new State("Colorado", List.of(denver, aurora), 100000);
+
+        this.states = List.of(arizona, colorado);
 
     }
 
 
     @QueryMapping
-    public List<State> cityState(){
+    public List<State> allStates(){
         return states;
     }
 }

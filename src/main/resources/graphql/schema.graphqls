@@ -1,9 +1,15 @@
+type Mutation {
+    changeCountryPopulation(countryName: String!, population: Int!) : Country
+}
 
 
 
 type Query {
     girlfriends : [Girlfriend],
-    getGirlfriendByName(name: String!): Girlfriend
+    getGirlfriendByName(name: String!): Girlfriend,
+    allStates: [State],
+    allCountries: [Country]
+
 }
 
 
@@ -16,6 +22,11 @@ type City {
     cityName: String
 }
 
+type Country {
+    countryName: String
+    population: Int
+}
+
 
 """
 purposely leaving an attribute out of State --> State.population()
@@ -24,4 +35,5 @@ purposely leaving an attribute out of State --> State.population()
 type State {
     stateName: String
     cities: [City]
+    population: Int
 }
