@@ -2,7 +2,7 @@
 
 
 
-![](spring-learning-graphql/src/main/resources/images/img.png)
+![](src/main/resources/images/img.png)
 
 ### Overview & Highlights: 
 
@@ -33,4 +33,4 @@ type Person {
      lastName: String
 }
 ```
-![](Downloads/spring-learning-graphql/src/main/resources/images/img_1.png)
+![](src/main/resources/images/img_1.png)
