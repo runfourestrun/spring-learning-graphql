@@ -13,25 +13,6 @@ type Query {
 }
 
 
- enum Genre{
-     ROCK,
-     RAP,
-     COUNTRY,
-     OPERA
-}
-
-
-
-
-
-
-
-type Artist {
-    firstName: String,
-    lastName: String,
-    genre: Genre
-}
-
 type Girlfriend {
     name: String
     age: Int
