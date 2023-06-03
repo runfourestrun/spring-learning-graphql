@@ -2,7 +2,7 @@
 
 
 
-![](Downloads/spring-learning-graphql/src/main/resources/images/img.png)
+![](spring-learning-graphql/src/main/resources/images/img.png)
 
 ### Overview & Highlights: 
 
