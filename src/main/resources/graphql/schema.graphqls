@@ -8,9 +8,12 @@ type Query {
     girlfriends : [Girlfriend],
     getGirlfriendByName(name: String!): Girlfriend,
     allStates: [State],
-    allCountries: [Country]
-
+    allCountries: [Country],
+    countryWithMostEvents: Country
 }
+
+
+
 
 
  enum Genre{
@@ -23,6 +26,12 @@ type Query {
 
 
 
+type Event {
+    eventName: String
+    city: City
+    countries:  Country
+    artist: Artist
+}
 
 
 

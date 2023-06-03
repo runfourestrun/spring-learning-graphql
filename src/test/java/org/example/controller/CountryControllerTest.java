@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.dto.Country;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,8 +14,8 @@ class CountryControllerTest {
         var population = 70;
         var countryName = "USA";
 
-        var USA = new Country("USA", 270000000);
-        var SA = new Country("Saudi Arabia", 23535353);
+        var USA = new Country("USA", 270000000,null);
+        var SA = new Country("Saudi Arabia", 23535353,null);
 
         var countryList = List.of(USA,SA);
 

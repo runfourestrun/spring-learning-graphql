@@ -8,10 +8,38 @@ type Query {
     girlfriends : [Girlfriend],
     getGirlfriendByName(name: String!): Girlfriend,
     allStates: [State],
-    allCountries: [Country]
-
+    allCountries: [Country],
+    countryWithMostEvents: Country
 }
 
+
+
+
+
+ enum Genre{
+     ROCK,
+     RAP,
+     COUNTRY,
+     OPERA
+}
+
+
+
+
+type Event {
+    eventName: String
+    city: City
+    countries:  Country
+    artist: Artist
+}
+
+
+
+type Artist {
+    firstName: String,
+    lastName: String,
+    genre: Genre
+}
 
 type Girlfriend {
     name: String

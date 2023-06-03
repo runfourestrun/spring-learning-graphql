@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import org.example.dto.Country;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -20,8 +21,8 @@ public class CountryController {
 
     public CountryController() {
         this.countryList = List.of(
-                new Country("USA", 270000000),
-                new Country("Saudi Arabia", 23535353));
+                new Country("USA", 270000000,null),
+                new Country("Saudi Arabia", 23535353,null));
 
 
     }

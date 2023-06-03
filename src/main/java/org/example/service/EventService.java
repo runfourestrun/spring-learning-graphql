@@ -25,8 +25,8 @@ public class EventService {
         City austin = new City("Austin");
         City boston = new City("Boston");
 
-        Country usa = new Country("USA", Optional.of(List.of(austin,boston)));
-        Country brazil = new Country("Brazil", Optional.of(List.of(rio)));
+        Country usa = new Country("USA",34343, Optional.of(List.of(austin,boston)));
+        Country brazil = new Country("Brazil",35353, Optional.of(List.of(rio)));
 
 
         Artist menatwork = new Artist("Machine","Gun Kelley", Genre.ROCK);
