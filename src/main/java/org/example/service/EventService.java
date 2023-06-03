@@ -58,7 +58,13 @@ public class EventService {
         Country mostCommonCountry = optionalmostCommonCountry.get();
 
         return mostCommonCountry;
+    }
 
+
+    public Optional<Event> getEventByArtist(String artistName){
+         return  events.stream()
+                .filter(event -> event.artist().getFirstName().equalsIgnoreCase(artistName))
+                .findFirst();
 
     }
 

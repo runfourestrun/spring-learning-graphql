@@ -9,7 +9,8 @@ type Query {
     getGirlfriendByName(name: String!): Girlfriend,
     allStates: [State],
     allCountries: [Country],
-    countryWithMostEvents: Country
+    getCountryWithMostEvents: Country
+    getEventByArtist(artistName: String): Event
 }
 
 
