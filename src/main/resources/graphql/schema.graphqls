@@ -66,3 +66,22 @@ type State {
     cities: [City]
     population: Int
 }
+
+
+type Person {
+    id: ID!
+    name: String!
+    email: String!
+}
+
+type Asset {
+    id: ID!
+    serviceName: String!
+}
+
+type Project {
+    id: ID!
+    projectName: String!
+    assets: [Asset]!
+    users: [Person]!
+}
