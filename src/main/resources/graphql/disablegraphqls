@@ -1,0 +1,35 @@
+type Query {
+    getServiceByName(name: String!): ManagedService
+}
+
+
+type DatabaseService implements ManagedService {
+    managedServiceName: String!
+    metadata: [MetadataEntry!]!
+    iamUsers: [Person!]!
+    databaseType: String!
+}
+
+type AppService implements ManagedService {
+    managedServiceName: String!
+    metadata: [MetadataEntry!]!
+    iamUsers: [Person!]!
+    restAPI: String!
+}
+
+interface ManagedService {
+    metadata: [MetadataEntry!]!
+    iamUsers: [Person!]!
+    managedServiceName: String!
+}
+
+type MetadataEntry {
+    key: String!
+    value: String!
+}
+
+type Person {
+    id: String!
+    name: String!
+    email: String!
+}
