@@ -3,6 +3,8 @@ package graphqlinterface.controller;
 import graphqlinterface.model.DatabaseService;
 import graphqlinterface.model.ManagedService;
 import graphqlinterface.service.CloudService;
+import jakarta.annotation.security.RunAs;
+import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
@@ -19,7 +21,7 @@ public class GraphQLController {
 
 
     @QueryMapping
-    public ManagedService getServiceByName(String name){
+    public ManagedService getServiceByName(@Argument String name){
         return this.cloudService.getManagedServiceByName(name);
     }
 
