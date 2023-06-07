@@ -1,6 +1,5 @@
-package org.example.dto;
+package org.initialexample.dto;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,14 +1,13 @@
-package org.example.service;
+package org.initialexample.service;
 
-import org.example.dto.*;
+
+import org.initialexample.dto.*;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class EventService {
@@ -29,7 +28,7 @@ public class EventService {
         Country brazil = new Country("Brazil",35353, Optional.of(List.of(rio)));
 
 
-        Artist menatwork = new Artist("Machine","Gun Kelley", Genre.ROCK);
+        Artist menatwork = new Artist("marshall","mathews", Genre.RAP);
         Artist tswift = new Artist("t","swift", Genre.COUNTRY);
         Artist dre = new Artist("dr dre","unknown",Genre.RAP);
 

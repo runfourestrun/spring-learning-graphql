@@ -1,7 +1,7 @@
-package org.example.controller;
+package org.initialexample.controller;
 
-import org.example.dto.City;
-import org.example.dto.Girlfriend;
+import org.initialexample.dto.City;
+import org.initialexample.dto.Girlfriend;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;

@@ -1,87 +1,35 @@
-type Mutation {
-    changeCountryPopulation(countryName: String!, population: Int!) : Country
-}
-
-
-
 type Query {
-    girlfriends : [Girlfriend],
-    getGirlfriendByName(name: String!): Girlfriend,
-    allStates: [State],
-    allCountries: [Country],
-    getCountryWithMostEvents: Country
-    getEventByArtist(artistName: String): Event
+    getServiceByName(name: String!): ManagedService
 }
 
 
-
-
-
- enum Genre{
-     ROCK,
-     RAP,
-     COUNTRY,
-     OPERA
+type DatabaseService implements ManagedService {
+    managedServiceName: String!
+    metadata: [MetadataEntry!]!
+    iamUsers: [Person!]!
+    databaseType: String!
 }
 
-
-
-
-type Event {
-    eventName: String
-    city: City
-    countries:  Country
-    artist: Artist
+type AppService implements ManagedService {
+    managedServiceName: String!
+    metadata: [MetadataEntry!]!
+    iamUsers: [Person!]!
+    restAPI: String!
 }
 
-
-
-type Artist {
-    firstName: String,
-    lastName: String,
-    genre: Genre
+interface ManagedService {
+    metadata: [MetadataEntry!]!
+    iamUsers: [Person!]!
+    managedServiceName: String!
 }
 
-type Girlfriend {
-    name: String
-    age: Int
+type MetadataEntry {
+    key: String!
+    value: String!
 }
-
-type City {
-    cityName: String
-}
-
-type Country {
-    countryName: String
-    population: Int
-}
-
-
-"""
-purposely leaving an attribute out of State --> State.population()
-
-"""
-type State {
-    stateName: String
-    cities: [City]
-    population: Int
-}
-
 
 type Person {
-    id: ID!
+    id: String!
     name: String!
     email: String!
-}
-
-type Asset {
-    id: ID!
-    serviceName: String!
-}
-
-type Project {
-    id: ID!
-    projectName: String!
-    assets: [Asset]!
-    users: [Person]!
 }

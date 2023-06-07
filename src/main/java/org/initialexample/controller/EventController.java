@@ -1,9 +1,9 @@
-package org.example.controller;
+package org.initialexample.controller;
 
 
-import org.example.dto.Country;
-import org.example.dto.Event;
-import org.example.service.EventService;
+import org.initialexample.dto.Country;
+import org.initialexample.dto.Event;
+import org.initialexample.service.EventService;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;

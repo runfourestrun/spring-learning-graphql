@@ -1,6 +1,6 @@
-package org.example.controller;
+package org.initialexample.controller;
 
-import org.example.dto.Country;
+import org.initialexample.dto.Country;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;

@@ -1,4 +1,4 @@
-package org.example.dto;
+package org.initialexample.dto;
 
 public record City(String cityName) {
 }

@@ -1,14 +1,12 @@
 package org.example.service;
 
 
-import org.example.dto.Country;
-import org.example.dto.Event;
+import org.initialexample.dto.Country;
+import org.initialexample.service.EventService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class EventServiceTest {
 

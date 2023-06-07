@@ -1,4 +1,4 @@
-package org.example.dto;
+package org.initialexample.dto;
 
 public record Girlfriend(String name, Integer age) {
 }

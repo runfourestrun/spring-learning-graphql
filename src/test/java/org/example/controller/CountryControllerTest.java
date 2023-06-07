@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.dto.Country;
+import org.initialexample.dto.Country;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
